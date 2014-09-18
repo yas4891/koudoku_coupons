@@ -1,0 +1,16 @@
+.container
+  .row
+    .col-md-offset-1.col-md-10
+      %table.table.table-bordered.table-condensed
+        %tr
+          %th Name
+          %th Coupon Code
+          %th Redirection Target
+          %th 
+        - @promotions.each do |promotion|
+          %tr
+            %td= promotion.name
+            %td= promotion.coupon_code
+            %td= promotion.redirect
+            %td= link_to "Edit", edit_promotion_path(promotion)
+      =link_to 'New Promotion', new_promotion_path, :class => 'btn btn-default'

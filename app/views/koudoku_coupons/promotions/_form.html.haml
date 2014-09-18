@@ -1,0 +1,24 @@
+- #@promotion.new_record? ? uri = calendar_appointments_path : uri = calendar_appointment_path
+= form_for(@promotion, {html: {:class => 'form-horizontal', role: 'form', id: 'promotion_form'}}) do |f|
+  - if @promotion.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@promotion.errors.count, "error")} prohibited this promotion from being saved:"
+
+      %ul
+        -@promotion.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :name, :class => 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :name, placeholder: 'Promotion Name', length: 30
+  .form-group
+    = f.label :coupon_code, 'Coupon Code', :class => 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :coupon_code, placeholder: 'Stripe Coupon Code', length: 30
+  .form-group
+    = f.label :redirect, 'Redirect URL', :class => 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :redirect, placeholder: 'Redirection URL'
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit 'Create', {:class => 'btn btn-primary btn-small', id: 'promotion_submit'}
