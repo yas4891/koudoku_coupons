@@ -12,5 +12,7 @@
             %td= promotion.name
             %td= promotion.coupon_code
             %td= promotion.redirect
-            %td= link_to "Edit", edit_promotion_path(promotion)
+            %td
+              = link_to "Edit", edit_promotion_path(promotion)
+              = link_to "Delete", promotion_path(promotion), method: 'DELETE'
       =link_to 'New Promotion', new_promotion_path, :class => 'btn btn-default'

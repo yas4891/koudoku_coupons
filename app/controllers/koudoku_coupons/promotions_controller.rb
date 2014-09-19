@@ -1,5 +1,5 @@
 module KoudokuCoupons
-  class PromotionsController < ApplicationController
+  class PromotionsController < KoudokuCoupons::ApplicationController
     
     def index
       @promotions = Promotion.all
@@ -22,6 +22,12 @@ module KoudokuCoupons
           format.json { render json: @promotion.errors, status: :unprocessable_entity }
         end
       end
+    end
+    
+    def destroy
+      @promotion = Promotion.find(params[:id])
+      @promotion.destroy
+      redirect_to promotions_path
     end
     
     def edit
