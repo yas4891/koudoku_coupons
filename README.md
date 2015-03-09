@@ -9,7 +9,7 @@ KoudokuCoupons adds support for [Stripe](http://www.stripe.com) coupons to [Koud
 For KoudokuCoupons to work properly you need to add the following lines to your `Gemfile`: 
 
 ```ruby
-gem 'koudoku', git: 'https://github.com/yas4891/koudoku.git' # handles stripe subscriptions
+gem 'koudoku', git: 'https://github.com/andrewculver/koudoku.git' # handles stripe subscriptions
 gem 'koudoku_coupons'
 ```
 
