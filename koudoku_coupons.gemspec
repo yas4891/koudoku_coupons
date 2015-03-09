@@ -13,11 +13,11 @@ Gem::Specification.new do |s|
   s.summary     = "Adds capability for full Stripe coupons to Koudoku"
   s.description = "KoudokuCoupons allows you to use the full power of "
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 3.2.19"
-  s.add_dependency 'koudoku', '~> 0.0.11'
+  s.add_dependency 'koudoku'#, '~> 0.0.11'
   s.add_dependency 'haml-rails', '~> 0.4.0'
   # s.add_dependency "jquery-rails"
 
