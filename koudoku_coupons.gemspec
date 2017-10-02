@@ -16,9 +16,9 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails", ">= 5.0.0"
-  s.add_dependency 'koudoku'#, '~> 0.0.11'
-  s.add_dependency 'haml-rails', '~> 0.4.0'
+  s.add_dependency "rails"
+  s.add_dependency 'koudoku'
+  s.add_dependency 'haml-rails'
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
