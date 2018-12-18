@@ -2,8 +2,6 @@
 
 KoudokuCoupons adds support for [Stripe](http://www.stripe.com) coupons to [Koudoku](https://github.com/yas4891/koudoku).
 
-**NOTE**: KoudokuCoupons currently only works with my fork of Koudoku, because the upstream repository does not merge pull requests at the moment.
-
 ## Installation
 
 For KoudokuCoupons to work properly you need to add the following lines to your `Gemfile`: 
